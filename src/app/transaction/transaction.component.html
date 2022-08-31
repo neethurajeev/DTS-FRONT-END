@@ -1,0 +1,24 @@
+
+
+<nav class="navbar navbar-light bg-dark " >
+    <a class="navbar-brand  " href="#" style="color:rgb(85, 98, 237);"><b>&#169; DTS Bank Pvt.Ltd </b></a>
+    <span class="quote text-light">Giving you financial freedom...</span>
+    <br>
+  </nav>
+  <h2 style="color: white; text-align: center;">Transaction History</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let t of transaction">
+            <th>{{t.type}}</th>
+            <th>{{t.amount}}</th>
+        </tr>
+   </tbody>
+    
+</table>
+<a class="home" routerLink="/dashboard">HOME</a>

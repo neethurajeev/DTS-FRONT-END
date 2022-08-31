@@ -1,0 +1,111 @@
+<nav class="navbar navbar-light bg-dark " >
+    <a class="navbar-brand  " href="#" style="color:rgb(85, 98, 237);"><b>&#169; DTS Bank Pvt.Ltd </b></a>
+    <span class="quote text-light">Giving you financial freedom...</span>
+    <br>
+  </nav>
+  
+  <div class="container col-md-12 mt-0">
+      <div class="d-flex justify-content-center h-100">
+          <div class="card1">
+              <div class="card-header">
+                  <h3 class="text-center">Registration</h3>
+
+              </div>
+              <div class="card-body">
+                <form [formGroup]="registerForm" (ngSubmit)="register()">
+
+                    <div class="input-group form-group">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fas fa-user"></i></span>
+                          </div>
+                          <input type="text" name="uname" formControlName="uname"   class="form-control" placeholder="Full Name" id="login_uname" required>
+
+                      </div>
+                      <div *ngIf="(this.registerForm.get('uname')?.touched||this.registerForm.get('uname')?.dirty)&&this.registerForm.get('uname')?.errors" style="color: red;">Invalid Username</div>
+                      
+                      <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" name="ph" formControlName="ph"   class="form-control" placeholder="Phone Number " id="login_ph" required>
+
+                    </div>
+                    <div *ngIf="(this.registerForm.get('ph')?.touched||this.registerForm.get('ph')?.dirty)&&this.registerForm.get('ph')?.errors" style="color: red;">Invalid Phone Number</div>
+
+                      <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="date" name="dob" formControlName="dob"   class="form-control" placeholder="Date of Birth" id="login_dob" required>
+
+                      </div>
+                      <div *ngIf="(this.registerForm.get('dob')?.touched||this.registerForm.get('dob')?.dirty)&&this.registerForm.get('dob')?.errors" style="color: red;">Date of Birth</div>
+                      
+                      <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" name="address" formControlName="address"   class="form-control" placeholder="Address " id="login_address" required>
+
+                    </div>
+                    <div *ngIf="(this.registerForm.get('address')?.touched||this.registerForm.get('address')?.dirty)&&this.registerForm.get('address')?.errors" style="color: red;">Address Please</div>
+
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" name="post" formControlName="post"   class="form-control" placeholder="Post " id="login_post" required>
+
+                    </div>
+                    <div *ngIf="(this.registerForm.get('post')?.touched||this.registerForm.get('post')?.dirty)&&this.registerForm.get('post')?.errors" style="color: red;">Post</div>
+
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" name="pin" formControlName="pin"   class="form-control" placeholder="Pin Number " id="login_pin" required>
+
+                    </div>
+                    <div *ngIf="(this.registerForm.get('pin')?.touched||this.registerForm.get('pin')?.dirty)&&this.registerForm.get('pin')?.errors" style="color: red;">Pin Number</div>
+
+
+
+                      <div class="input-group form-group">
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example"   class="form-control" >
+                        <option selected>Account Type</option>
+                        <option value="1">Savings Account</option>
+                        <option value="2">Current Account</option>
+                        <option value="3">Bussiness Account</option>
+                      </select>
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" name="acno" formControlName="acno"   class="form-control" placeholder="User Id Please" id="login_accno" required>
+
+                      </div>
+                      <div *ngIf="(this.registerForm.get('acno')?.touched||this.registerForm.get('acno')?.dirty)&&this.registerForm.get('acno')?.errors" style="color: red;">Invalid UserID</div>
+
+                     
+
+                      <div class="input-group form-group">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fas fa-key"></i></span>
+                          </div>
+                          <input type="password" name="pwd" formControlName="pwd"   class="form-control" placeholder="Password Please" id="login_password" required>
+
+                        </div>
+                        <div *ngIf="(this.registerForm.get('pwd')?.touched||this.registerForm.get('pwd')?.dirty)&&this.registerForm.get('pwd')?.errors" style="color: red;">Invalid Password</div>
+
+                      
+                      <div class="form-group">
+                          <input type="submit"   value="Register" class="btn float-right login_btn " style="width:50%" >
+
+                        </div>
+                  </form>
+              </div>
+              <p style="color:white;align-items:baseline;">Existing  user? <a routerLink="">Login In</a></p>
+          </div>
+      </div>
+  </div>
